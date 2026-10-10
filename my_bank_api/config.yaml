@@ -1,0 +1,27 @@
+name: My Bank API
+version: "0.6.0"
+slug: my_bank_api
+description: Self-hosted personal finance backend for the My Bank integration (accounts, transactions, budgets, schedules).
+url: https://github.com/Patafoin/my-bank-api
+arch:
+  - amd64
+  - aarch64
+image: ghcr.io/patafoin/my-bank-api
+startup: services
+boot: auto
+# Annonce l'add-on à Home Assistant : l'intégration My Bank se configure sans URL ni jeton.
+discovery:
+  - my_bank
+hassio_api: true
+# Port interne 8000, non publié par défaut : HA y accède par le réseau interne des add-ons.
+# Le publier (ex. 9931) donne accès à la documentation interactive /docs depuis le réseau local.
+ports:
+  8000/tcp: null
+ports_description:
+  8000/tcp: My Bank API (only needed for direct access to /docs or other clients)
+# Instantané SQLite cohérent juste avant chaque sauvegarde de Home Assistant (la base vivante peut être en cours d'écriture).
+backup_pre: docker-entrypoint my-bank backup
+# Jeton facultatif pour un autre client que Home Assistant (celui de HA est créé et transmis automatiquement).
+options: {}
+schema:
+  api_token: password?

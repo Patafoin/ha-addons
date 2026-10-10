@@ -1,0 +1,6 @@
+network:
+  8000/tcp: My Bank API port. Leave empty unless you want to reach /docs or the API from another device.
+configuration:
+  api_token:
+    name: API token (optional)
+    description: Token for clients other than Home Assistant (scripts, /docs). Home Assistant gets its own token automatically.

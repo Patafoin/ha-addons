@@ -1,0 +1,6 @@
+configuration:
+  api_token:
+    name: API-Token (optional)
+    description: Token für andere Clients als Home Assistant (Skripte, /docs). Home Assistant erhält sein eigenes Token automatisch.
+network:
+  8000/tcp: Port der My Bank API. Leer lassen, außer um /docs oder die API von einem anderen Gerät aus zu erreichen.

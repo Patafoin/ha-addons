@@ -1,0 +1,6 @@
+network:
+  8000/tcp: Port de My Bank API. À laisser vide, sauf pour consulter /docs ou l'API depuis un autre appareil.
+configuration:
+  api_token:
+    name: Jeton d'API (facultatif)
+    description: Jeton pour d'autres clients que Home Assistant (scripts, /docs). Home Assistant reçoit le sien automatiquement.
