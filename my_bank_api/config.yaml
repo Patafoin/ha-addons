@@ -1,5 +1,5 @@
 name: My Bank API
-version: "0.6.0"
+version: "0.6.1"
 slug: my_bank_api
 description: Self-hosted personal finance backend for the My Bank integration (accounts, transactions, budgets, schedules).
 url: https://github.com/Patafoin/my-bank-api

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1
+
+- Fix: the **api_token** option was ignored (the options file is only readable before the server drops root privileges). It now works, and clearing the option revokes the token.
+- Tested on Home Assistant OS 18.3 with Home Assistant 2026.10.0.
+
 ## 0.6.0
 
 - First release as a Home Assistant add-on.
