@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.2
+
+- Attachments on a transaction: a link, or a file (10 MiB max, stored in the database). Used by the My Bank integration 0.13.6+.
+
 ## 0.6.1
 
 - Fix: the **api_token** option was ignored (the options file is only readable before the server drops root privileges). It now works, and clearing the option revokes the token.
