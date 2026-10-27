@@ -1,5 +1,5 @@
 name: My Bank API
-version: "0.6.2"
+version: "0.8.0"
 slug: my_bank_api
 description: Self-hosted personal finance backend for the My Bank integration (accounts, transactions, budgets, schedules).
 url: https://github.com/Patafoin/my-bank-api
@@ -22,6 +22,9 @@ ports_description:
 # Instantané SQLite cohérent juste avant chaque sauvegarde de Home Assistant (la base vivante peut être en cours d'écriture).
 backup_pre: docker-entrypoint my-bank backup
 # Jeton facultatif pour un autre client que Home Assistant (celui de HA est créé et transmis automatiquement).
-options: {}
+# `docs` : documentation interactive /docs, lisible sans jeton, donc coupée par défaut.
+options:
+  docs: false
 schema:
   api_token: password?
+  docs: bool

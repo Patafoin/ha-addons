@@ -4,3 +4,6 @@ configuration:
   api_token:
     name: API token (optional)
     description: Token for clients other than Home Assistant (scripts, /docs). Home Assistant gets its own token automatically.
+  docs:
+    name: Interactive documentation
+    description: Serve /docs, /redoc and /openapi.json. Off by default, as these pages are readable without a token (they describe the API, not your data).

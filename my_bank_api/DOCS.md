@@ -19,7 +19,7 @@ Backend of the [My Bank integration](https://github.com/Patafoin/ha-my-bank): yo
 
 The API listens on port 8000 inside the internal app network only. Home Assistant reaches it directly; nothing is published on your LAN by default.
 
-To browse the interactive API documentation (`/docs`) or use the API from another device, set a host port in the **Network** section (for example 9931). Every API call requires a token: set the **api_token** option to a long random string of your choice, restart the app, and use it as `Authorization: Bearer <api_token>`. Home Assistant does not need it (its own token is created automatically). Clearing the option and restarting the app revokes the token.
+To browse the interactive API documentation (`/docs`) or use the API from another device, set a host port in the **Network** section (for example 9931). The documentation is off by default (it is readable without a token): turn on the **docs** option and restart the app to browse it. Every API call requires a token: set the **api_token** option to a long random string of your choice, restart the app, and use it as `Authorization: Bearer <api_token>`. Home Assistant does not need it (its own token is created automatically). Clearing the option and restarting the app revokes the token.
 
 **Never expose this port to the Internet.** Remote access goes through Home Assistant.
 

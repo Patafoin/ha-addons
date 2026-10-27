@@ -4,3 +4,6 @@ configuration:
   api_token:
     name: Jeton d'API (facultatif)
     description: Jeton pour d'autres clients que Home Assistant (scripts, /docs). Home Assistant reçoit le sien automatiquement.
+  docs:
+    name: Documentation interactive
+    description: Sert /docs, /redoc et /openapi.json. Coupée par défaut, car ces pages se lisent sans jeton (elles décrivent l'API, pas vos données).
