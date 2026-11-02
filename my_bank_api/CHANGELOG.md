@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0
+
+- Bulk categorize: `POST /transactions/categorize` changes the category, class and/or payee of several transactions at once, by id.
+- Category, class and payee are no longer locked by reconciliation: changing them on a reconciled transaction (single or bulk) no longer requires un-reconciling it first, since none of them affects a balance.
+
 ## 0.8.0
 
 - Account currency: `currency` (ISO 4217, e.g. EUR, USD, GBP) can now be set when creating or updating an account; defaults to EUR when not given.
