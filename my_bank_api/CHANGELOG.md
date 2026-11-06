@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.0
+
+- Payment due date: a transaction can have an optional `due_date` (null by default: nothing changes for it). `GET /transactions?due_before=…` lists the transactions due by that date (combine with `state=0` for the unpaid ones).
+- Scheduled transactions: optional `due_days`; each generated transaction gets a due date of its date + `due_days` days (0 = same day). Empty by default: no due date.
+
 ## 0.9.0
 
 - Bulk categorize: `POST /transactions/categorize` changes the category, class and/or payee of several transactions at once, by id.
