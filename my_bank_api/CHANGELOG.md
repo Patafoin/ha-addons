@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0
+
+- Scheduled transactions: global automatic entry rule anchored on the month. `GET`/`PATCH /schedules/settings` reads and sets a single global setting (`auto_entry_enabled`, `auto_entry_days_before_month_start`); a scheduled transaction can opt in with `use_global_lead_days` (default `false`, existing ones untouched) to follow it instead of its own `lead_days`.
+
 ## 0.10.0
 
 - Payment due date: a transaction can have an optional `due_date` (null by default: nothing changes for it). `GET /transactions?due_before=…` lists the transactions due by that date (combine with `state=0` for the unpaid ones).
