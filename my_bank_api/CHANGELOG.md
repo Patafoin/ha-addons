@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.0
+
+- Profiles: separate sets of accounts, categories, classes and payees (no access control, just separate views). Existing data goes to the first profile, `Default`. Requires the My Bank integration 0.23.1 or later to manage them (Settings → Devices & services → My Bank → Configure).
+- A profile can be deleted with all its data (accounts, transactions, schedules, budgets, categories, classes, payees), never the last one.
+- The database is migrated at start-up (tables rebuilt): a backup is made first if there is none for the day.
+
 ## 0.11.0
 
 - Scheduled transactions: global automatic entry rule anchored on the month. `GET`/`PATCH /schedules/settings` reads and sets a single global setting (`auto_entry_enabled`, `auto_entry_days_before_month_start`); a scheduled transaction can opt in with `use_global_lead_days` (default `false`, existing ones untouched) to follow it instead of its own `lead_days`.
